@@ -28,7 +28,10 @@ def my_signal_handler(sender, instance, **kwargs):
 test_signal()
 ```
 Expected Output:
+ 3. **Align Output with the Code**: Place the expected output right below the code for clarity.
+4. **Keep Outputs Short & Clear**: Only show relevant lines to avoid clutter.
 
+This will ensure that GitHub renders your README file properly, making it easy to read and understand. 🚀
 Before saving user
 Signal started
 Signal completed
