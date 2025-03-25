@@ -27,15 +27,16 @@ def my_signal_handler(sender, instance, **kwargs):
 
 test_signal()
 ```
-Expected Output:
- 3. **Align Output with the Code**: Place the expected output right below the code for clarity.
-4. **Keep Outputs Short & Clear**: Only show relevant lines to avoid clutter.
 
-This will ensure that GitHub renders your README file properly, making it easy to read and understand. 🚀
+**Expected Output:**
+```none
 Before saving user
 Signal started
 Signal completed
 After saving user
+```
+
+
 This proves that Django signals are executed synchronously because the main thread waits for the signal handler to complete before proceeding.
 
 ## Question 2: Do Django signals run in the same thread as the caller?
@@ -59,12 +60,15 @@ def my_signal_handler(sender, instance, **kwargs):
     print(f"Signal thread ID: {threading.get_ident()}")
 
 test_signal()
-Expected Output:
+```
 
+**Expected Output:**
+```none
 Main thread ID: 140736248518464
 Signal thread ID: 140736248518464
-Since both the main function and signal handler run in the same thread, this confirms that Django signals execute in the same thread as the caller.
 ```
+Since both the main function and signal handler run in the same thread, this confirms that Django signals execute in the same thread as the caller.
+
 
 ## Question 3: By default, do Django signals run in the same database transaction as the caller?
 **Answer:** 
@@ -91,11 +95,12 @@ def my_signal_handler(sender, instance, **kwargs):
 test_signal()
 
 ```
-Expected Output:
-
+**Expected Output:**
+```none
 Inside transaction: User saved
 Signal executed
 Outside transaction: Committed
+```
 Since the signal executes before the transaction completes, it confirms that Django signals run in the same database transaction as the caller.
 
 ## Topic: Custom Classes in Python
@@ -116,7 +121,9 @@ rect = Rectangle(10, 5)
 for item in rect:
     print(item)
 ```
-Expected Output:
+**Expected Output:**
+```none
 
 {'length': 10}
 {'width': 5}
+```
