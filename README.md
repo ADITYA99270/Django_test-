@@ -20,3 +20,9 @@ def my_signal_handler(sender, instance, **kwargs):
     print("Signal completed")
 
 test_signal()
+
+<br>
+Expected Output:
+
+Main thread ID: 140736248518464
+Signal thread ID: 140736248518464
