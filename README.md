@@ -1,6 +1,6 @@
 # Topic: Django Signals
 
-## Question 1: By default, are Django signals executed synchronously or asynchronously?
+## Question 1: By default are django signals executed synchronously or asynchronously? 
 
 **Answer:**  
 Django signals are executed **synchronously** by default, meaning they run in the same execution flow as the function that triggers them.  
